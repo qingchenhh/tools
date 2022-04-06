@@ -7,7 +7,7 @@ echo -e "\033[32m \033[0m"
 
 if [ -f "key.pem" ] && [ -f "cert.pem" ];then
 
-	if [ "$1" == "" ] && [ "$2" == "" ] ;then
+	if [ "$1" == "" ] || [ "$2" == "" ] ;then
 		echo -e "\033[31m[-] Error!\033[0m"
 		echo -e "\033[34m[*] 脚本使用方法：bash listen.sh 本机IP 监听端口\033[0m"
 		exit 1
