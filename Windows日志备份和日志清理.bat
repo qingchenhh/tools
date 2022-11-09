@@ -3,7 +3,7 @@
 cd /d "%~dp0"
 
 rem mode con cols=120 lines=40
-rem title WindowsÈÕÖ¾±¸·ÝÇåÀív0.1 by:Çå³¿
+rem title Windowsæ—¥å¿—å¤‡ä»½æ¸…ç†v0.1 by:æ¸…æ™¨
 rem color 0a
 
 rem PowerShell -Command "& {Get-Date -Format 'yyyy-MM-dd H:m:s'}" > date
@@ -25,7 +25,7 @@ echo %Setup_log%
 
 if exist "%save_path%" (
 	echo.
-	echo [*] ´æÔÚ%save_path%Ä¿Â¼£¬³ÌÐò½«Í£Ö¹Ö´ÐÐ£¡
+	echo [*] å­˜åœ¨%save_path%ç›®å½•ï¼Œç¨‹åºå°†åœæ­¢æ‰§è¡Œï¼
 	exit
 ) else ( echo.
 	md %save_path%
@@ -33,37 +33,37 @@ if exist "%save_path%" (
 
 if exist "%Application_log%" (
 	echo.
-	echo [*] ´æÔÚApplicationÈÕÖ¾ÎÄ¼þ£¬½«½øÐÐApplicationÈÕÖ¾ÎÄ¼þ±¸·Ý¡£
+	echo [*] å­˜åœ¨Applicationæ—¥å¿—æ–‡ä»¶ï¼Œå°†è¿›è¡ŒApplicationæ—¥å¿—æ–‡ä»¶å¤‡ä»½ã€‚
 	copy %Application_log% %save_path%
 ) else ( echo.
-	echo [-] ²»´æÔÚApplicationÈÕÖ¾ÎÄ¼þ£¬³ÌÐò½«Í£Ö¹Ö´ÐÐ£¡¡£
+	echo [-] ä¸å­˜åœ¨Applicationæ—¥å¿—æ–‡ä»¶ï¼Œç¨‹åºå°†åœæ­¢æ‰§è¡Œï¼ã€‚
 	exit
 )
 
 if exist "%Security_log%" (
 	echo.
-	echo [*] ´æÔÚSecurityÈÕÖ¾ÎÄ¼þ£¬½«½øÐÐSecurityÈÕÖ¾ÎÄ¼þ±¸·Ý¡£
+	echo [*] å­˜åœ¨Securityæ—¥å¿—æ–‡ä»¶ï¼Œå°†è¿›è¡ŒSecurityæ—¥å¿—æ–‡ä»¶å¤‡ä»½ã€‚
 	copy %Security_log% %save_path%
 ) else ( echo.
-	echo [-] ²»´æÔÚSecurityÈÕÖ¾ÎÄ¼þ£¬³ÌÐò½«Í£Ö¹Ö´ÐÐ£¡¡£
+	echo [-] ä¸å­˜åœ¨Securityæ—¥å¿—æ–‡ä»¶ï¼Œç¨‹åºå°†åœæ­¢æ‰§è¡Œï¼ã€‚
 	exit
 )
 
 if exist "%System_log%" (
 	echo.
-	echo [*] ´æÔÚSystemÈÕÖ¾ÎÄ¼þ£¬½«½øÐÐSystemÈÕÖ¾ÎÄ¼þ±¸·Ý¡£
+	echo [*] å­˜åœ¨Systemæ—¥å¿—æ–‡ä»¶ï¼Œå°†è¿›è¡ŒSystemæ—¥å¿—æ–‡ä»¶å¤‡ä»½ã€‚
 	copy %System_log% %save_path%
 ) else ( echo.
-	echo [-] ²»´æÔÚSystemÈÕÖ¾ÎÄ¼þ£¬³ÌÐò½«Í£Ö¹Ö´ÐÐ£¡¡£
+	echo [-] ä¸å­˜åœ¨Systemæ—¥å¿—æ–‡ä»¶ï¼Œç¨‹åºå°†åœæ­¢æ‰§è¡Œï¼ã€‚
 	exit
 )
 
 if exist "%Setup_log%" (
 	echo.
-	echo [*] ´æÔÚSetupÈÕÖ¾ÎÄ¼þ£¬½«½øÐÐSetupÈÕÖ¾ÎÄ¼þ±¸·Ý¡£
+	echo [*] å­˜åœ¨Setupæ—¥å¿—æ–‡ä»¶ï¼Œå°†è¿›è¡ŒSetupæ—¥å¿—æ–‡ä»¶å¤‡ä»½ã€‚
 	copy %Setup_log% %save_path%
 ) else ( echo.
-	echo [-] ²»´æÔÚSetupÈÕÖ¾ÎÄ¼þ£¬³ÌÐò½«Í£Ö¹Ö´ÐÐ£¡¡£
+	echo [-] ä¸å­˜åœ¨Setupæ—¥å¿—æ–‡ä»¶ï¼Œç¨‹åºå°†åœæ­¢æ‰§è¡Œï¼ã€‚
 	exit
 )
 
@@ -72,5 +72,5 @@ PowerShell -Command "& {Clear-Eventlog -Log Application,System,Security}"
 rem Get-WinEvent -ListLog Application,Setup,Security -Force | % {Wevtutil.exe cl $_.Logname}
 
 echo.
-echo Çë°´ÈÎÒâ¼üÍË³ö¡£
+echo è¯·æŒ‰ä»»æ„é”®é€€å‡ºã€‚
 pause >nul
