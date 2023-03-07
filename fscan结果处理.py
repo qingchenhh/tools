@@ -22,7 +22,7 @@ with open(file,mode='r',encoding='utf-8') as f:
     for i in f:
         str = i.replace('\n','')
         str1 = str.lstrip()
-        if str.startswith('[+]'):
+        if str.startswith('[+]') and (not str.startswith('[+] NetInfo')):
             print(str)
             flag = 1
         elif  flag and str1.startswith('[->]'):
