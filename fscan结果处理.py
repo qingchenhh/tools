@@ -2,7 +2,7 @@ import os
 import sys
 
 if len(sys.argv) < 2:
-    print("请输入一个IP地址或者一个IP列表文件！")
+    print("请输入一个fscan结果文件！")
     exit()
 elif not os.path.exists(sys.argv[1]):
     print("您输入的文件没有找到！")
