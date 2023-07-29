@@ -1,9 +1,11 @@
 @echo off
+%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
+cd /d "%~dp0"
 title Windows端口转发
 color 0a
 :starting
 echo.
-echo ***脚本是使用windows自带的netsh进行端口转发，需要管理员权限运行，默认360会拦截。***
+echo ***脚本是使用windows自带的netsh进行端口转发，默认360会拦截。***
 echo.
 set /p des=目标ip：
 set /p des_port=目标端口：
