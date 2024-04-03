@@ -33,5 +33,5 @@ if exist "%URLFinder%" (
 ) else (
 	echo [-] URLFinderµÄÂ·¾¶´íÎó£¡
 )
-
+set URL=
 goto start
