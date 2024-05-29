@@ -1,6 +1,6 @@
 exts = ['.zip','.rar','.7z','.gz','.tar','.tar.gz','.tar.bz2','.bz2','.sql','.sql.tar.gz','.sql.gz','.sql.bz2']
-file_name = ['www','temp','wwwroot','web','1','2022','2021','2023','0','root','data','database','back','backup','backups','admin','webapps','backupdata']
-paths = ['/','/admin/','/backup/','/data/','/DB/','/back/']
+file_name = ['www','temp','wwwroot','web','1','2022','2023','2024','0','root','data','database','back','backup','backups','admin','webapps','backupdata']
+paths = ['/','/admin/','/backup/','/data/','/db/','/back/']
 count = 0
 for path in paths:
     for ext in exts:
